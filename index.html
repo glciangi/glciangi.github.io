@@ -2,7 +2,39 @@
 <html>
     <head>
     <style>
-    h1 {
+    body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+        h1 {
         color: white;
     }
     
@@ -38,6 +70,13 @@
     </head>
     <body>
     
+<ul>
+  <li><a class="active" href="index">Home</a></li>
+  <li><a class="active" href="#news">News</a></li>
+  <li><a class="active" href="#contact">Contact</a></li>
+  <li><a class="active" href="#about">About</a></li>
+</ul>
+
         <h1>Travel to <em>Egypt</em></h1> 
         <h2> Why should you go to egypt?</h2>
     <p class="hi"> Egypt may be a cost expensive trip, however the things you will see and learn there are all worth while. You can visit the pyramids, ride camels, and learn some history about the wonderful place. If your looking for somewhere to stay, look at trip advisor. Egypt is a beautiful place with massive deserts for you and your family to see. Along with real life oasis's that you will find in nowhere else! You cant get the real egyptian experience and history without traveling to egypt. No history book or teacher can tell you what youll expect when you get off your plane here!
