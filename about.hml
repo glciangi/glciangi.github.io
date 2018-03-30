@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li><a class="active" href="website.html">Home</a></li>
+    <li><a class="active" href="news.html">News</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
+    <li><a class="active" href="about.html">About</a></li>
+    <li><a class="active" href="game.html">Game</a></li>
+</ul>
+<h1>This is a website created by a computer programming student. Ive never been to egypt myself however it was the first idea that popped into my head when I was told to my a Travel website. <h1>The places that I tell you to visit and the information that you find on this website is not necessarily the best travel guide if you are serious on going to egypt. Thanks and enjoy!</h1></h1>
+</body>
+</html>
