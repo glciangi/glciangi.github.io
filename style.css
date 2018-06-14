@@ -20,19 +20,18 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-li a:hover:not(.active) {
+li a:hover:active {
     background-color: #111;
 }
 .active {
-    background-color: #4CAF50;
+    background-color: #1f2daf;
 }
 h1 {
     color: white;
 }
 
-
 body {
-    background-color:brown;
+    background-color: #a54890;
     padding:20px;
     margin-top:30px;
     height:1500px;
@@ -41,6 +40,7 @@ body {
 h2 {
     color:white;
 }
+
 
 .Esketit {
     color:white;
