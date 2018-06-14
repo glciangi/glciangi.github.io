@@ -1,109 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <link rel="stylesheet" href="style.css">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Word Guesser Starter Code</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
-
 <body>
 <ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a class="active" href="news.html">News</a></li>
-    <li><a class="active" href="contact.html">Contact</a></li>
-    <li><a class="active" href="about.html">About</a></li>
-    <li><a class="active" href="game.html">Game</a></li>
+    <li><a class="active" href="welcome.html">Welcome To Mystery</a></li>
+    <li><a class="active" href="Kevin.html">Suspect 1</a></li>
+    <li><a class="active" href="Ron.html">Suspect 2</a></li>
+    <li><a class="active" href="Karen.html">Suspect 3</a></li>
+    <li><a class="active" href="Susan.html">Suspect 4</a></li>
+    <li><a class="active" href="victim.html">Victim Info</a></li>
+    <li><a class="active" href="guess.html">Guess The Answer</a></li>
 </ul>
 
-<body>
 
-<div id="guess_display"></div>
-
-
-<form id="guess_form">
-    <label>Guess a letter:
-        <input type="text" id="guess_input">
-    </label>
-</form>
-
-<div id="guess_status"></div>
-
-<script>
-    // Store DOM elements in variables
-    var guessForm = document.getElementById("guess_form");
-    var guessDisplay = document.getElementById("guess_display");
-    var guessInput = document.getElementById("guess_input");
-    var guessStatus = document.getElementById("guess_status");
-
-    // Initialize game state variables
-    var secretWord = "gianluca";
-    var guessedWord = [];
-    var guessedLetters = [];
-    for (var i = 0; i < secretWord.length; i++) {
-        guessedWord[i] = "_";
-    }
+<em></em><h1><center>Who's responsible?</center></h1><br>
+<br>
+<br>
+<br>
 
 
-    // Returns true if its a correct guess -
-    //  if the letter is anywhere in the word
-    // Also updates guessedWord and guessedLetters
-    var checkLetterGuess = function(letter) {
-        var foundLetter = false;
-        for (var i = 0; i < secretWord.length; i++)  {
-            if (secretWord[i] === letter) {
-                guessedWord[i] = letter;
-                foundLetter = true
+            <h2 id="q1" onclick="myFunction1()">Kevin</h2>
+
+            <h2 id="q2" onclick="myFunction2()">Ron</h2>
+
+            <h2 id="q3" onclick="myFunction3()">Karen</h2>
+
+            <h2 id="q4" onclick="myFunction4()">Susan</h2>
+
+
+    <script>
+        function showAnswers(id) {
+            var choices = document.getElementByClassName('q');
+            for (var i = 0; i < choices.length; i++) {
+                choices[i].style.display = "none;"
             }
+            document.getElementById(id).style.display = "block";
         }
-        guessedLetters.push(letter);
-        return foundLetter;
-    };
-
-    // Returns true if they guessed the whole word
-    var hasWon = function() {
-        if (secretWord === guessedWord.join("")) {
-            return true
+        function myFunction1() {
+            document.getElementById("q1").innerHTML = "You are correct! Kevin was the culprit of the cruise. Because Kevin had nothing to lose and was fed up with everything that people said about his horrible food. He decided to make an example out of our victim.";
+            showAnswers("a1");
         }
-
-    };
-
-
-    var displayGuessedWord = function() {
-        guessDisplay.innerHTML = guessedWord.join(" ");
-    };
-
-
-    guessForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        var foundLetter = checkLetterGuess(guessInput.value);
-        if (foundLetter) {
-            guessStatus.innerHTML = "Yay you found one!";
-        } else {
-            guessStatus.innerHTML = "Sorry, not so much!";
+        function myFunction2() {
+            document.getElementById("q2").innerHTML = "Sorry but no... Ron had to much money and too much to live for. The heirloom that our victim had was like another pet to Ron and he had no reason to murder him for it,.";
+            showAnswers("a2");
         }
-        if (hasWon()) {
-            guessStatus.innerHTML += "WOOO WINNER WINNER!";
+        function myFunction3() {
+            document.getElementById("q3").innerHTML = "Karen actually was not the culprit. Unless she was crazy she had no reason but the fact that she would have rather gone to Africa with her family. Karen also cares very much for her kids and only wants whats best for them, and not having a father wont help that.";
+            showAnswers("a3");
         }
-        displayGuessedWord();
-        guessInput.value = "";
-    });
-    displayGuessedWord();
-
-    // Step 0: Read through the code and understand it
-    // Step 1: Implement guessLetter
-    // Step 2: Implement hasWon
-    // Bonus Steps:
-    // - Randomly generate a word for each game
-    //   by pulling from an array
-    // - Come up with a scoring mechanism --
-    //    you can declare game over in a # of guesses
-    //    or just track number of guesses and display it
-    // - Display the letters they've already guessed
-    // - Implement error checking for duplicate guesses
-    // - Make way cooler win and lose states!
-
-</script>
-
-</body>
-</html>
+        function myFunction4() {
+            document.getElementById("q4").innerHTML = "Although Susan was one of the top suspects... She actually did not commit the murder. Susan like her sister Karen only wanted whats best for her family, and even though her and the victim argued over things she is smart and knowns that him being dead wouoldnt do anything";
+            showAnswers("a4");
+        }
+     </script>
